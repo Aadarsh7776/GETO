@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        /* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white /* Black background */
+}
+#header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 80px;
+background:#000000;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+position: sticky;  
+left: 0;
+z-index: 999;
+top: 0;
+}
+.logo {
+width: 40px; /* adjust the width to fit the navbar */
+height: 40px; /* adjust the height to fit the navbar */
+margin: 10px; 
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+
+.search form{
+    display: flex;
+    margin: 0;
+}
+.search input{
+    padding: 10px;
+    border:1px solid #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.search input:hover{
+    border:1px solid #72a0d4;
+
+}
+.search button{
+    padding: 10px;
+    background-color: #fff;
+    border:none;
+    border-radius: 5px;
+    color:#333;
+    font-size: 19px;
+    cursor: pointer;
+}
+.search button:hover{
+    background-color:#ccc;
+}
+
+#navbar {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#navbar li {
+list-style: none;
+padding:0 20px;
+position:relative;
+}
+
+#navbar li a {
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: white;
+transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+color:white;
+
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+content:"";
+width: 30%;
+height:2px;
+background: white;
+position: absolute;
+bottom: -4px;
+left: 20px;
+}
+        /* Custom CSS */
+        body {
+            background-color: #000; /* Set the background to black */
+            color: #fff; /* White text */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background-color: #fff; /* White container */
+            color: #333;
+        }
+
+        .card {
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+
+        .card-header {
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        .accordion-button {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #333;
+        }
+
+        .accordion-body {
+            background: #f9f9f9;
+            color: #000;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/log.png" class="logo" alt="Logo"></a>
+
+
+        <div>
+            <ul id ="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="Beauty.html">Beauty</a></li>
+                <li><a href="Household.html">Household</a></li>
+                <div class="search">
+                    <form>
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="Account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="contact.html">Contact</a></li>
+            
+                
+            </ul>
+        </div>
+    </section>
+    <div class="container my-5 p-5 border border-dark rounded bg-white">
+        <div class="text-center mb-4">
+            <h1 class="display-4 text-dark">User Account</h1>
+        </div>
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white text-center">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" value="John Doe">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email ID:</label>
+                    <input type="email" class="form-control" id="email" value="johndoe@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone No:</label>
+                    <input type="text" class="form-control" id="phone" value="+1 234 567 890">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address:</label>
+                    <input type="text" class="form-control" id="address" value="123, Main Street, City, Country">
+                </div>
+                <button class="btn btn-dark" id="saveProfile">Save Profile</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-dark" id="toggleOrders">Orders</button>
+        </div>
+
+        <div class="card border-dark mt-4" id="ordersCard" style="display: none;">
+            <div class="card-header bg-dark text-white text-center">
+                <h2>Previous Orders</h2>
+            </div>
+            <div class="card-body">
+                <div class="accordion" id="orderAccordion">
+                    <!-- Example Order Details -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="orderOneHeading">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderOneDetails" aria-expanded="true" aria-controls="orderOneDetails">
+                                Order #1: Plumber Service - Completed
+                            </button>
+                        </h2>
+                        <div id="orderOneDetails" class="accordion-collapse collapse show" aria-labelledby="orderOneHeading" data-bs-parent="#orderAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Order Date:</strong> 2023-07-21</p>
+                                <p><strong>Mode of Payment:</strong> Credit Card</p>
+                                <p><strong>Amount Paid:</strong> $50</p>
+                                <p><strong>Status:</strong> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="orderTwoHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#orderTwoDetails" aria-expanded="false" aria-controls="orderTwoDetails">
+                                Order #2: Electrician Service - Pending
+                            </button>
+                        </h2>
+                        <div id="orderTwoDetails" class="accordion-collapse collapse" aria-labelledby="orderTwoHeading" data-bs-parent="#orderAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Order Date:</strong> 2023-09-15</p>
+                                <p><strong>Mode of Payment:</strong> Cash on Delivery</p>
+                                <p><strong>Amount:</strong> $75</p>
+                                <p><strong>Status:</strong> Pending</p>
+                                <button type="button" class="btn btn-dark">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="orderThreeHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#orderThreeDetails" aria-expanded="false" aria-controls="orderThreeDetails">
+                                Order #3: Maid Service - Completed
+                            </button>
+                        </h2>
+                        <div id="orderThreeDetails" class="accordion-collapse collapse" aria-labelledby="orderThreeHeading" data-bs-parent="#orderAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Order Date:</strong> 2023-08-05</p>
+                                <p><strong>Mode of Payment:</strong> Debit Card</p>
+                                <p><strong>Amount Paid:</strong> $40</p>
+                                <p><strong>Status:</strong> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle Previous Orders display
+        document.getElementById('toggleOrders').addEventListener('click', function() {
+            const ordersCard = document.getElementById('ordersCard');
+            if (ordersCard.style.display === 'none') {
+                ordersCard.style.display = 'block';
+                this.textContent = 'Hide Previous Orders';
+            } else {
+                ordersCard.style.display = 'none';
+                this.textContent = 'Show Previous Orders';
+            }
+        });
+
+        // Save Profile functionality
+        document.getElementById('saveProfile').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            // Simulate saving profile (could be integrated with backend later)
+            alert(`Profile Updated!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}`);
+        });
+        app.post('/cancel-order', (req, res) => {
+    const orderId = req.body.orderId;
+    
+    // Check the order status in the database
+    db.collection('orders').findOne({ orderId: orderId }, (err, order) => {
+        if (err || !order) {
+            return res.status(404).send('Order not found');
+        }
+
+        // Only allow cancellation if the order is pending
+        if (order.status === 'Pending') {
+            // Update the order status to cancelled
+            db.collection('orders').updateOne(
+                { orderId: orderId },
+                { $set: { status: 'Cancelled' } },
+                (err, result) => {
+                    if (err) {
+                        return res.status(500).send('Error cancelling order');
+                    }
+                    // Send cancellation email
+                    sendEmailToUser(orderId, 'Your order has been cancelled.');
+                    res.send('Order cancelled successfully.');
+                }
+            );
+        } else {
+            res.status(400).send('Order cannot be cancelled as it is already processed or completed.');
+        }
+    });
+});
+document.querySelectorAll('.order').forEach(order => {
+    const statusElement = order.querySelector('.order-status');
+    const cancelButton = order.querySelector('.cancel-order');
+
+    if (statusElement.textContent.trim() === 'Pending') {
+        cancelButton.style.display = 'inline-block'; // Show the button only for pending orders
+    }
+
+    cancelButton.addEventListener('click', function() {
+        const orderId = order.getAttribute('data-order-id');
+
+        // Mark the order as cancelled in the UI
+        order.innerHTML = `<p>Order ID: ${orderId}</p>
+                           <p>Status: Cancelled</p>
+                           <p>Your order has been cancelled. A confirmation email has been sent.</p>`;
+
+        // Function to send cancellation email (simulated)
+        sendCancellationEmail(orderId);
+    });
+});
+
+// Function to simulate sending a cancellation email
+function sendCancellationEmail(orderId) {
+    console.log(`Cancellation email sent for Order ID: ${orderId}`);
+}
+
+    </script>
+</body>
+</html>

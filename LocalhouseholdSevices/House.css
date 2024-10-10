@@ -1,0 +1,98 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: white; /* Black background */
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  left: 0;
+  z-index: 999;
+  top: 0;
+}
+.logo {
+  width: 40px; /* adjust the width to fit the navbar */
+  height: 40px; /* adjust the height to fit the navbar */
+  margin: 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.search form {
+  display: flex;
+  margin: 0;
+}
+.search input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.search input:hover {
+  border: 1px solid #72a0d4;
+}
+.search button {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-size: 19px;
+  cursor: pointer;
+}
+.search button:hover {
+  background-color: #ccc;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: white;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.card-body .btn {
+  background-color: #000000;
+}

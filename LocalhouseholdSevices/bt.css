@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* Change the navbar background color */
+.navbar {
+    background-color: #007bff; /* Blue background */
+}
+
+/* Change the text color of the navbar links */
+.navbar .nav-link {
+    color: white; /* White text */
+}
+
+/* Change the hover color of navbar links */
+.navbar .nav-link:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
+/* Customize the button */
+.btn-primary {
+    background-color: #28a745; /* Green background */
+    border-color: #28a745; /* Match border color */
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34; /* Darker border color on hover */
+}
+
+/* Add some spacing to the container */
+.container {
+    margin-top: 20px;
+}

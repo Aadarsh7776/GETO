@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+    <!-- Link to your CSS -->
+    <script src="script.js" defer></script>
+    <!-- Link to your JavaScript -->
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/loo.png" class="logo" alt="Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Beauty.html">Beauty</a></li>
+          <li><a href="Household.html">Household</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="login-container">
+      <h2>Login</h2>
+      <form onsubmit="login(); return false;">
+        <!-- Call login on form submission -->
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter Username"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p class="register-text">
+          Don't have an account? <a href="Register page.html">Register Here</a>
+        </p>
+        <p class="register-text">
+          <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
